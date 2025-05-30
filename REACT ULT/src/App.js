@@ -1,16 +1,13 @@
 //installing the Boiler was an issue well it was more doing the NPM INSTALL part that idk seems to be messing up with 6 high errors and 2 critical
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Button, ButtonGroup } from 'react-bootstrap/Button' ;
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Alert from 'react-bootstrap/Alert';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
+import { Button, ButtonGroup, Alert, Container, Card } from 'react-bootstrap' ;
+
 import {
   BrowserRouter as Router, 
   Switch,
   Route,
-  Like,
+  Link,
   useRouteMatch
 } from 'react-router-dom';
 
@@ -56,7 +53,7 @@ export default function App() {
                       <Posts posts={posts} />
                   </Route>
                   <Route path="/friends">
-                      <Friends name={['Vert Wheeler', 'Taro Kitana',  'Kurt Wylde']} />
+                      <Friends names={['Vert Wheeler', 'Taro Kitana',  'Kurt Wylde']} />
                   </Route>
                   <Route path="/">
                       <Home />
@@ -72,7 +69,8 @@ function Home() {
     return <h2>Home</h2>
 }
 
-function Friends() {
+function Friends(props) {
+  console.log('This is my friends properties', props)
   const { names } = props;
   
   return (
