@@ -1,6 +1,5 @@
 //installing the Boiler was an issue well it was more doing the NPM INSTALL part that idk seems to be messing up with 6 high errors and 2 critical
 import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button, ButtonGroup, Alert, Container, Card } from 'react-bootstrap' ;
 
 import {
